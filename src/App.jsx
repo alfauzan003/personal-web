@@ -1,3 +1,12 @@
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import ProjectDetail from './pages/ProjectDetail'
+
 export default function App() {
-  return <div className="min-h-screen bg-white p-8 text-slate-900 font-sans">Tailwind works</div>
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projects/:slug" element={<ProjectDetail />} />
+    </Routes>
+  )
 }

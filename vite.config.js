@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
-  base: '/personal-web/',
+  base: process.env.NODE_ENV === 'production' ? '/personal-web/' : '/',
   plugins: [react()],
   resolve: {
     alias: {

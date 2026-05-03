@@ -44,11 +44,15 @@ export default function Portfolio() {
       </div>
 
       {/* Project grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filtered.map((project) => (
-          <ProjectCard key={project.slug} {...project} />
-        ))}
-      </div>
+      {filtered.length === 0 ? (
+        <p className="text-slate-500 text-sm">No projects in this category yet.</p>
+      ) : (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtered.map((project) => (
+            <ProjectCard key={project.slug} {...project} />
+          ))}
+        </div>
+      )}
     </SectionWrapper>
   )
 }

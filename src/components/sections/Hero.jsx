@@ -16,7 +16,7 @@ export default function Hero() {
         <section
             className="min-h-screen flex items-center pt-16 relative overflow-hidden"
             style={{
-                backgroundImage: "url(/assets/img/hero-bg.jpg)",
+                backgroundImage: `url(${import.meta.env.BASE_URL}assets/img/hero-bg.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center bottom",
             }}
@@ -53,7 +53,7 @@ export default function Hero() {
                         </Button>
                         <Button variant="outline" size="lg" asChild>
                             <a
-                                href="/assets/cv.pdf"
+                                href="/assets/CV_Habib_Al_Fauzan.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

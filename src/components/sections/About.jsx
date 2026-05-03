@@ -62,7 +62,7 @@ export default function About() {
                 <div className="flex justify-center">
                     <Avatar className="w-64 h-64 ring-4 ring-blue-100">
                         <AvatarImage
-                            src="/assets/img/profile-img-2.jpg"
+                            src={`${import.meta.env.BASE_URL}assets/img/profile-img-2.jpg`}
                             alt="Habib Al Fauzan"
                             className="object-cover object-top object-[center_50%]"
                         />

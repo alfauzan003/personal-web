@@ -10,16 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <title>Habib Al Fauzan</title>
     <script>
-      // Restore path saved by 404.html redirect
-      (function() {
-        var redirect = sessionStorage.getItem('redirect');
-        if (redirect) {
-          sessionStorage.removeItem('redirect');
-          // Strip the /personal-web prefix so React Router sees the correct path
-          var path = redirect.replace(/^\/personal-web/, '') || '/';
-          window.history.replaceState(null, null, '/personal-web' + path);
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // Decodes the path encoded by 404.html back into a real URL before
+      // React Router boots, so deep links and refreshes land on the right route.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
         }
-      })();
+      })(window.location);
     </script>
   </head>
   <body>

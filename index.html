@@ -10,12 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <title>Habib Al Fauzan</title>
     <script>
+      // Restore path saved by 404.html redirect
       (function() {
-        var p = window.location.search.slice(1).split('&').find(function(s) { return s.startsWith('p='); });
-        if (p) {
-          var path = '/' + decodeURIComponent(p.slice(2));
-          var h = window.location.search.slice(1).split('&').find(function(s) { return s.startsWith('h='); });
-          window.history.replaceState(null, null, path + (h ? '#' + decodeURIComponent(h.slice(2)) : ''));
+        var redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+          sessionStorage.removeItem('redirect');
+          // Strip the /personal-web prefix so React Router sees the correct path
+          var path = redirect.replace(/^\/personal-web/, '') || '/';
+          window.history.replaceState(null, null, '/personal-web' + path);
         }
       })();
     </script>

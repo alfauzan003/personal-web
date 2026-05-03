@@ -1,9 +1,12 @@
+const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+const asset = (path) => `${base}${path}`
+
 export const projects = [
     {
         slug: "eqpt-monitor",
         title: "EQPT Monitor",
         category: "backend",
-        thumbnail: "/assets/img/portfolio/eqpt-monitor-3.png",
+        thumbnail: asset("/assets/img/portfolio/eqpt-monitor-3.png"),
         techStack: [
             "Python",
             "FastAPI",
@@ -87,9 +90,9 @@ TimescaleDB  Redis 7
         results:
             "End-to-end streaming pipeline handling 1 Hz telemetry from 8 machines with zero downtime during demos. Three Grafana dashboards (Equipment Telemetry, Factory Health, System Health). Prometheus metrics on ingest rate, batch latency, and WebSocket connections.",
         media: [
-            { type: "image", url: "/assets/img/portfolio/eqpt-monitor-1.png" },
-            { type: "image", url: "/assets/img/portfolio/eqpt-monitor-2.png" },
-            { type: "image", url: "/assets/img/portfolio/eqpt-monitor-3.png" },
+            { type: "image", url: asset("/assets/img/portfolio/eqpt-monitor-1.png") },
+            { type: "image", url: asset("/assets/img/portfolio/eqpt-monitor-2.png") },
+            { type: "image", url: asset("/assets/img/portfolio/eqpt-monitor-3.png") },
         ],
         github: "https://github.com/alfauzan003/eqpt-monitor",
         demo: null,
@@ -98,7 +101,7 @@ TimescaleDB  Redis 7
         slug: "throttle",
         title: "Throttle",
         category: "backend",
-        thumbnail: "/assets/img/portfolio/throttle-1.png",
+        thumbnail: asset("/assets/img/portfolio/throttle-1.png"),
         techStack: [
             "Go",
             "PostgreSQL",
@@ -165,9 +168,9 @@ TimescaleDB  Redis 7
         results:
             "Atomic rate limiting with no application-level locking. Hot-reloadable rule config. Full production deploy layer with Caddy TLS termination and VPS bootstrap scripts. Integration tests with testcontainers-go against real Postgres and Redis.",
         media: [
-            { type: "image", url: "/assets/img/portfolio/throttle-1.png" },
-            { type: "image", url: "/assets/img/portfolio/throttle-2.png" },
-            { type: "image", url: "/assets/img/portfolio/throttle-3.png" },
+            { type: "image", url: asset("/assets/img/portfolio/throttle-1.png") },
+            { type: "image", url: asset("/assets/img/portfolio/throttle-2.png") },
+            { type: "image", url: asset("/assets/img/portfolio/throttle-3.png") },
         ],
         github: "https://github.com/alfauzan003/throttle",
         demo: null,
@@ -176,7 +179,7 @@ TimescaleDB  Redis 7
         slug: "predictive-maintenance",
         title: "Predictive Maintenance ML Pipeline",
         category: "data",
-        thumbnail: "/assets/img/portfolio/pdm-3.png",
+        thumbnail: asset("/assets/img/portfolio/pdm-3.png"),
         techStack: [
             "Python",
             "FastAPI",
@@ -247,9 +250,9 @@ Client ──► POST /predict ──► Prediction API ──► PostgreSQL (pr
         results:
             "XGBoost achieved best RMSE on C-MAPSS FD001. 56 unit tests plus integration tests covering both APIs and both Prefect flows. Live /metrics and /evaluate dashboards with Chart.js degradation curves. Fully containerised 7-service stack.",
         media: [
-            { type: "image", url: "/assets/img/portfolio/pdm-1.png" },
-            { type: "image", url: "/assets/img/portfolio/pdm-2.png" },
-            { type: "image", url: "/assets/img/portfolio/pdm-3.png" },
+            { type: "image", url: asset("/assets/img/portfolio/pdm-1.png") },
+            { type: "image", url: asset("/assets/img/portfolio/pdm-2.png") },
+            { type: "image", url: asset("/assets/img/portfolio/pdm-3.png") },
         ],
         github: "https://github.com/alfauzan003/C-MAPSS-turbofan",
         demo: null,
@@ -258,7 +261,7 @@ Client ──► POST /predict ──► Prediction API ──► PostgreSQL (pr
         slug: "calory-in-api",
         title: "CaloryIn API",
         category: "backend",
-        thumbnail: "/assets/img/portfolio/caloryin-1.png",
+        thumbnail: asset("/assets/img/portfolio/caloryin-1.png"),
         techStack: [
             "Node.js",
             "ExpressJS",
@@ -276,7 +279,7 @@ Client ──► POST /predict ──► Prediction API ──► PostgreSQL (pr
             "ExpressJS REST API deployed on GCP App Engine. Firestore for user data and food logs. Cloud Storage for food image uploads. Stateless, JWT-authenticated endpoints: /auth, /food, /log.",
         results:
             "Successfully deployed and demonstrated to Bangkit Academy reviewers. API handled concurrent requests from the mobile team with zero downtime during the demo period.",
-        media: [{ type: "image", url: "/assets/img/portfolio/caloryin-1.png" }],
+        media: [{ type: "image", url: asset("/assets/img/portfolio/caloryin-1.png") }],
         github: null,
         demo: null,
     },
@@ -284,7 +287,7 @@ Client ──► POST /predict ──► Prediction API ──► PostgreSQL (pr
         slug: "flutter-movies-app",
         title: "Flutter Movies App",
         category: "android",
-        thumbnail: "/assets/img/portfolio/movie-1.jpg",
+        thumbnail: asset("/assets/img/portfolio/movie-1.jpg"),
         techStack: ["Flutter", "Dart", "TMDB API", "BLoC"],
         overview:
             "A mobile movie discovery app integrating with The Movie Database (TMDB) API to display trending movies, search titles, and show detailed film information.",
@@ -297,9 +300,9 @@ Client ──► POST /predict ──► Prediction API ──► PostgreSQL (pr
         results:
             "Smooth search and browse experience with proper loading and error states. Demonstrated advanced Flutter patterns (BLoC, repository pattern) applicable to production-scale apps.",
         media: [
-            { type: "image", url: "/assets/img/portfolio/movie-1.jpg" },
-            { type: "image", url: "/assets/img/portfolio/movie-2.jpg" },
-            { type: "image", url: "/assets/img/portfolio/movie-4.jpg" },
+            { type: "image", url: asset("/assets/img/portfolio/movie-1.jpg") },
+            { type: "image", url: asset("/assets/img/portfolio/movie-2.jpg") },
+            { type: "image", url: asset("/assets/img/portfolio/movie-4.jpg") },
         ],
         github: null,
         demo: null,
@@ -308,7 +311,7 @@ Client ──► POST /predict ──► Prediction API ──► PostgreSQL (pr
         slug: "house-price-prediction",
         title: "House Price Prediction",
         category: "data",
-        thumbnail: "/assets/img/portfolio/house-price-pred-1.png",
+        thumbnail: asset("/assets/img/portfolio/house-price-pred-1.png"),
         techStack: [
             "Python",
             "Scikit-learn",
@@ -329,7 +332,7 @@ Client ──► POST /predict ──► Prediction API ──► PostgreSQL (pr
         media: [
             {
                 type: "image",
-                url: "/assets/img/portfolio/house-price-pred-1.png",
+                url: asset("/assets/img/portfolio/house-price-pred-1.png"),
             },
         ],
         github: null,

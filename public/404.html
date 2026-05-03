@@ -3,13 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <script>
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 2).join('/') +
-        '/?p=' + encodeURIComponent(l.pathname.slice(1) + l.search) +
-        (l.hash ? '&h=' + encodeURIComponent(l.hash.slice(1)) : '')
-      );
+      // Redirect unknown paths back to index with the path stored in sessionStorage
+      sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
+      location.replace('/personal-web/');
     </script>
   </head>
   <body></body>

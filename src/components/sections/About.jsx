@@ -21,19 +21,16 @@ export default function About() {
                     <h2 className="text-3xl font-bold text-slate-900 mb-6">
                         About Me
                     </h2>
-                    <p className="text-slate-600 leading-relaxed mb-6">
-                        I'm a software developer specialising in backend systems
-                        and cloud infrastructure, with experience delivering
-                        production software in the smart manufacturing industry.
-                        I've worked across the stack — from Equipment Interface
-                        logic and HMI web interfaces at LG Sinar Mas, to REST
-                        APIs deployed on Google Cloud during Bangkit Academy.
-                    </p>
-                    <p className="text-slate-600 leading-relaxed mb-8">
-                        I care about writing clean, maintainable code and
-                        building systems that are reliable at scale. I'm
-                        actively seeking new challenges where I can continue
-                        growing as an engineer.
+                    <p className="text-slate-700 leading-relaxed mb-6">
+                        Software Engineer with experience in backend development
+                        and smart factory systems for manufacturing
+                        environments. Skilled in optimizing system performance,
+                        troubleshooting complex issues, and maintaining reliable
+                        applications factories in multiple countries.
+                        Experienced in collaborating with global teams to
+                        integrate, support, and improve business-critical
+                        systems. Passionate about building scalable, efficient,
+                        and reliable software solutions.
                     </p>
                     <div className="flex flex-col gap-3">
                         {DETAILS.map(({ icon: Icon, label, value, href }) => (

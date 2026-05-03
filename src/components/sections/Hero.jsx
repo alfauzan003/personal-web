@@ -40,9 +40,9 @@ export default function Hero() {
                     <p className="text-xl text-slate-500 mb-6 font-light">
                         Software Engineer · Cloud · Data
                     </p>
-                    <p className="text-slate-600 max-w-xl mb-8 leading-relaxed">
-                        Backend-focused engineer with hands-on experience
-                        building scalable systems for smart factory, cloud
+                    <p className="text-slate-700 max-w-xl mb-8 leading-relaxed">
+                        Software engineer with hands-on experience building
+                        scalable systems for smart factory, cloud
                         infrastructure, and data-driven applications. Currently
                         at LG Sinar Mas, shipping production software across
                         LGES Factory in multiple countries.

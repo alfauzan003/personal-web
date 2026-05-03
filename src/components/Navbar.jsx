@@ -40,21 +40,21 @@ export default function Navbar() {
                 {/* Desktop nav */}
                 <div className="hidden md:flex items-center gap-6">
                     <nav className="flex items-center gap-6">
-                        {isHome ? (
-                            NAV_LINKS.map((link) => (
-                                <a
-                                    key={link.href}
-                                    href={link.href}
-                                    className="text-sm text-slate-600 hover:text-blue-600 transition-colors whitespace-nowrap"
-                                >
-                                    {link.label}
-                                </a>
-                            ))
-                        ) : null}
+                        {isHome
+                            ? NAV_LINKS.map((link) => (
+                                  <a
+                                      key={link.href}
+                                      href={link.href}
+                                      className="text-sm text-slate-600 hover:text-blue-600 transition-colors whitespace-nowrap"
+                                  >
+                                      {link.label}
+                                  </a>
+                              ))
+                            : null}
                     </nav>
                     <Button asChild size="sm" className="shrink-0">
                         <a
-                            href="/assets/cv.pdf"
+                            href={`${import.meta.env.BASE_URL}assets/CV_Habib_Al_Fauzan.pdf`}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -78,20 +78,20 @@ export default function Navbar() {
             {/* Mobile dropdown */}
             {menuOpen && (
                 <div className="md:hidden bg-white border-t border-slate-100 px-6 py-4 flex flex-col gap-4">
-                    {isHome ? (
-                        NAV_LINKS.map((link) => (
-                            <a
-                                key={link.href}
-                                href={link.href}
-                                className="text-sm text-slate-600 hover:text-blue-600"
-                                onClick={() => setMenuOpen(false)}
-                            >
-                                {link.label}
-                            </a>
-                        ))
-                    ) : null}
+                    {isHome
+                        ? NAV_LINKS.map((link) => (
+                              <a
+                                  key={link.href}
+                                  href={link.href}
+                                  className="text-sm text-slate-600 hover:text-blue-600"
+                                  onClick={() => setMenuOpen(false)}
+                              >
+                                  {link.label}
+                              </a>
+                          ))
+                        : null}
                     <a
-                        href="/assets/cv.pdf"
+                        href={`${import.meta.env.BASE_URL}assets/CV_Habib_Al_Fauzan.pdf`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm font-medium text-blue-600"

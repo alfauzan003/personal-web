@@ -53,7 +53,7 @@ export default function Hero() {
                         </Button>
                         <Button variant="outline" size="lg" asChild>
                             <a
-                                href="/assets/CV_Habib_Al_Fauzan.pdf"
+                                href={`${import.meta.env.BASE_URL}assets/CV_Habib_Al_Fauzan.pdf`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
